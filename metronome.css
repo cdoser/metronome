@@ -10,36 +10,12 @@ body {
     user-select: none;
 }
 
-.container-app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 100vh;
-}
-
-.container-negative, .container-positive {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 100%;
-}
-
-.container-negative {
-    background-color: lightblue;
-}
-
-.container-positive {
-    background-color: coral;
-}
-
 .container-panel {
     display: flex;
     justify-content: space-between;
-    flex-grow: 3;
     width: 100%;
     height: 70%;
+    background: #caf0f8;
 }
 
 .metronome {
@@ -47,20 +23,20 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* height: 70%; */
-    justify-content: space-between;
+    height: 100vh;
+    justify-content: center;
 }
 
 .bpm-display {
     width: 100%;
     text-align: center;
-    color: #ffde5f;
+    color: #023047;
     font-weight: bold;
-
+    padding: 1rem 0;
 }
 
 .tempo {
-    font-size: 7vw;
+    font-size: 20vw;
 }
 
 .tempo-text{
@@ -71,15 +47,17 @@ body {
 
 .tempo-settings {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
 }
 
 .adjust-tempo-btn {
-    width: 100%;
-    height: 100%;
+    height: 50px;
+    width: 50px;
     font-size: 5vw;
-    border: 1px solid #ddd;
+    border-radius: 50%;
+    border: 2px solid #023047;
+    background: #f3f3f3;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -89,28 +67,19 @@ body {
 
 
 .decrease-tempo:hover {
-    background: #68b2c1;
+    background: #ffb703;
     color: #fff;
 }
 
 .increase-tempo:hover {
-    background: rgb(233, 92, 74);
+    background: #ffb703;
     color: #fff;
 }
-
-/* .decrease-tempo {
-    line-height: 15px;
-}
-
-.increase-tempo {
-    line-height: 20px;
-} */
-
 
 input[type=range] {
     -webkit-appearance: none;
     background: transparent;
-    width: 80%;
+    width: 60%;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -127,7 +96,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 2rem;
     transform: translate(0px, -7px);
     border-radius: 50%;
-    background-color: #68b2c1;
+    background-color: #023047;
     cursor: pointer;
     margin: -6px;
 }
@@ -137,7 +106,7 @@ input[type=range]::-moz-range-thumb {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: #68b2c1;
+    background-color: #023047;
     cursor: pointer;
     border: none;
 }
@@ -145,63 +114,65 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 3px;
-    background-color: #ddd;
+    background-color: #023047;
 }
 
 input[type=range]::-moz-range-track {
     width: 100%;
     height: 1px;
-    background-color: #ddd;
+    background-color: #023047;
 }
 
 .start-stop {
-    width: 10vw;
-    height: 10vw;
-    font-size: 2.4vw;
+    width: 25vw;
+    height: 25vw;
+    font-size: 5vw;
     text-align: center;
     background: #68b2c1;
     border-radius: 50%;
-    color: #fff;
-    line-height: 9.4vw;
+    border: 1px solid black;
+    color: #023047;
+    line-height: 23vw;
     margin: 0 auto;
     cursor: pointer;
 }
 
 .start-stop:hover {
-    background: #ffde5f;
+    background: #ffb703;
 }
 
 .measures {
     display: flex;
     justify-content: center;
-    font-size: 3vw;
+    font-size: 5vw;
+    padding: 2rem 0;
 }
 .measures .stepper {
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50px;
-    border: 3px solid #ddd;
+    border: 1px solid #023047;
     text-align: center;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .measures .stepper:hover {
-    background: #ffde5f;
+    background: #ffb703;
     color: #fff;
 } 
 
 .measures .subtract-beats {
-    line-height: 4.4vw;
+    line-height: 8vw;
 }
 
 .measures .add-beats {
-    line-height: 4.4vw;
+    line-height: 8.8vw;
 }
 
 .beats-per-measure-text {
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
     text-transform: uppercase;
 }
 
@@ -218,5 +189,17 @@ input[type=range]::-moz-range-track {
         height: 100vh;
     }
 
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .measures {
+        padding: 0;
+    }
+
+    .bpm-display {
+        padding: 0;
+    }
 
 }
